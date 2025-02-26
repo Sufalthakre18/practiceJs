@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning Continue</title>
+</head>
+<body style="background-color: rgb(14, 14, 14); color: orange;">
+    <ul class="language">
+        <li>java</li>
+        
+    </ul>
+</body>
+<script>
+    function addlang(lang) {
+        const li = document.createElement('li');
+        li.innerHTML = `${lang}`;
+        document.querySelector(".language").appendChild(li);
+    }
+    addlang("python");
+    addlang("c++");
+    addlang("ruby");
+    // +++++++++++++++++++++++++++++++++++++++
+    function optiLang(lang) {
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector(".language").appendChild(li)
+    }
+    optiLang("golang")
+    // +++++++++++++++++++++Edit++++++++++++++++++++
+    const item=document.querySelector("li:nth-child(2)")
+    // item.innerHTML="typescirpt"
+    const li=document.createElement('li')
+    li.textContent="go"
+    item.replaceWith(li)
+    // ++++++++++++++++++++++++++++++++edit
+    const firstLang=document.querySelector("li:first-child")
+    firstLang.outerHTML="<li>java wali</li>"
+    // +++++++++++++++++++++++++++++++++++++++REmove
+    const lastlang=document.querySelector("li:last-child")
+    lastlang.remove()
+
+</script>
+</html>

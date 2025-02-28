@@ -3,37 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom Element learning</title>
+    <title>Async Project</title>
 </head>
-<body style="background-color: black; color: aqua;" >
-    <div class="parent">
-        <!-- htis is  -->
-        <div class="day">Monday</div>
-        <div class="day">Tuesday</div>
-        <div class="day">Wednesday</div>
-        <div class="day">Thursday</div>
-    </div>
-
+<body>
+    <h1>Jai Shree Ram</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
 </body>
 <script>
-    const parent=document.querySelector('.parent')
-    // console.log(parent);
-    // console.log(parent.children);
-    // console.log(parent.children[0].innerText);
-    // for (let i = 0; i < parent.children.length; i++) {
-    //     console.log(parent.children[i].innerHTML);
-         
-    // }
-    parent.children[0].style.color="orange"
-    // console.log(parent.firstElementChild);
-    // console.log(parent.lastElementChild);
-    const dayone=document.querySelector('.day')
-    // console.log(dayone);
-    // console.log(dayone.parentElement);
-    // console.log(dayone.nextElementSibling);
-    console.log("Nodes :",parent.childNodes);
-    
-    
-    
+    let intervalId; // Variable to store interval ID
+
+    // Start button event listener
+    document.querySelector('#start').addEventListener('click', function () {
+        if (!intervalId) { // Prevent multiple intervals
+            intervalId = setInterval(function () {
+                console.log("start");
+            }, 2000);
+        }
+    });
+
+    // Stop button event listener
+    document.querySelector('#stop').addEventListener('click', function () {
+        if (intervalId) {
+            clearInterval(intervalId); // Clear the interval
+            // intervalId = null; // Reset interval ID
+            console.log("stop");
+        }
+    });
 </script>
 </html>

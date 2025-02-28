@@ -1,0 +1,169 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body style="background-color:#3a3535; color:#fff;">
+  
+    
+    <div id="wrapper">
+    <h1>Number guessing game</h1>
+    <p>Try and guess a random number between 1 and 100.</p>
+    <p>You have 10 attempts to guess the right number.</p>
+    </br>
+        <form class="form">
+            <label2 for="guessField" id="guess">Guess a number</label>
+            <input type="text" id="guessField" class="guessField">
+            <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+        </form>
+
+        <div class="resultParas">
+            <p >Previous Guesses: <span class="guesses"></span></p>
+            <p >Guesses Remaining: <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+    <script src="home.js"></script>
+</body>
+</html> -->
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="Photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="Japan"></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="River"></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="Owl"></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="Prayer"></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function() {
+    //     alert("You touched Owl");
+    // };
+
+    // document.querySelector('#owl').addEventListener('click',function () {
+    //     alert("yes OWL clicked")
+    // })
+
+    
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('owl').addEventListener('click',function (e) {
+    //     console.log(e);
+    // },false)
+
+// Using false (event bubbling)
+    // document.getElementById('images').addEventListener('click',function (e) {
+    //     console.log("click inside the ul");
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function (e) {
+    //     console.log("owl clicked");
+    // },false)
+
+// Using true (event capturing)
+    // document.getElementById('images').addEventListener('click',function (e) {
+    //     console.log("click inside the ul");
+    // },true)
+
+    // document.getElementById('owl').addEventListener('click',function (e) {
+    //     console.log("owl clicked");
+    // },true)
+
+    // document.getElementById('images').addEventListener('click',function (e) {
+    //     console.log("click inside the ul");
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function (e) {
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+
+// *******************************
+
+    document.querySelector('#images').addEventListener('click',function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName==='IMG') {
+            console.log(e.target.id);
+            
+            let removeIt=e.target.parentNode
+            removeIt.remove()
+        }
+
+        
+    })
+
+
+    
+
+</script>
+</html> -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asyn project</title>
+</head>
+<body>
+    <h1>Jai shree Ram</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("jai shree ram");
+        
+    // },3000)
+
+    const say =function(){
+        console.log("jai shree ram");
+        
+    }
+    const changeSay=function(){
+        document.querySelector('h1').innerHTML="jai shree Mhakaal"
+    }
+    const changeme=setTimeout(changeSay,2000)
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeme)
+        console.log("I'm stopped");
+        
+    })
+</script>
+</html> -->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+

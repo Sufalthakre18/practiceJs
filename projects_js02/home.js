@@ -31,3 +31,22 @@ setInterval(function(){
     let date=new Date();
     clock.innerHTML=date.toLocaleTimeString();
 },1000)
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+const url = 'https://api.github.com/users/Sufalthakre18';
+        const xmr = new XMLHttpRequest();
+        xmr.open('GET', url);
+        xmr.onreadystatechange = function () {
+            if (xmr.readyState === 4) {
+                const data = JSON.parse(this.responseText);
+                document.getElementById('image').innerHTML = `<img src="${data.avatar_url}" alt="Profile">`;
+                document.getElementById('followers').innerHTML = `<h2>Followers: <span>${data.followers}</span></h2>`;
+                document.getElementById('repo').innerHTML = `<h2>repository : <span>${data.public_repos}</span></h2>`;
+                document.getElementById('ur').innerHTML = `<h2>URL: <a href="${data.html_url}" target="_blank">profile</a></h2>`;
+
+            }
+        };
+        xmr.send();
